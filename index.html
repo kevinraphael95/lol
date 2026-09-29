@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LoL Combo Trainer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +11,6 @@
 </head>
 <body>
 
-<!-- ============ HEADER ============ -->
 <div class="app-header">
   <div class="logo">
     <div class="logo-mark"><span>⚔</span></div>
@@ -25,16 +25,18 @@
       <button data-layout="azerty" class="active">AZERTY</button>
       <button data-layout="qwerty">QWERTY</button>
     </div>
+    <button class="theme-btn" id="themeBtn" data-theme="dark" title="Changer de thème">
+      <span class="icon icon-sun">☀</span>
+      <span class="icon icon-moon">☾</span>
+    </button>
   </div>
 </div>
 
-<!-- ============ NAV ============ -->
 <div class="nav-tabs">
   <button class="nav-tab active" data-page="champions">Champions</button>
   <button class="nav-tab" data-page="training">Entraînement</button>
 </div>
 
-<!-- ============ PAGE: LISTE ============ -->
 <div class="page active" id="page-champions">
   <div class="page-intro">
     <h2>Bibliothèque des champions</h2>
@@ -43,13 +45,11 @@
   <div class="champ-grid" id="champGrid"></div>
 </div>
 
-<!-- ============ PAGE: DÉTAIL ============ -->
 <div class="page" id="page-detail">
   <button class="back-btn" id="backBtn">← Retour aux champions</button>
   <div class="champ-detail" id="champDetail"></div>
 </div>
 
-<!-- ============ PAGE: ENTRAÎNEMENT ============ -->
 <div class="page" id="page-training">
   <div class="training-wrap">
     <div class="mode-switch">
