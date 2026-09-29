@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>LoL Combo Trainer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<div class="app-header">
+  <div class="logo">
+    <div class="logo-mark"><span>⚔</span></div>
+    <div class="logo-text">
+      <h1>Combo Trainer</h1>
+      <p>Practice Tool</p>
+    </div>
+  </div>
+  <div class="header-actions">
+    <span style="color:var(--text-dim); font-size:10px; letter-spacing:2px; text-transform:uppercase;">Clavier</span>
+    <div class="layout-pill">
+      <button data-layout="azerty" class="active">AZERTY</button>
+      <button data-layout="qwerty">QWERTY</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<div class="nav-tabs">
+  <button class="nav-tab active" data-page="champions">Champions</button>
+  <button class="nav-tab" data-page="training">Entraînement</button>
+</div>
+
+<!-- ============ PAGE: LISTE ============ -->
+<div class="page active" id="page-champions">
+  <div class="page-intro">
+    <h2>Bibliothèque des champions</h2>
+    <p>Choisis un champion pour découvrir son gameplay, ses compétences et ses combos. Entraîne-toi en mode libre ou en défi chrono.</p>
+  </div>
+  <div class="champ-grid" id="champGrid"></div>
+</div>
+
+<!-- ============ PAGE: DÉTAIL ============ -->
+<div class="page" id="page-detail">
+  <button class="back-btn" id="backBtn">← Retour aux champions</button>
+  <div class="champ-detail" id="champDetail"></div>
+</div>
+
+<!-- ============ PAGE: ENTRAÎNEMENT ============ -->
+<div class="page" id="page-training">
+  <div class="training-wrap">
+    <div class="mode-switch">
+      <button data-mode="training" class="active">Entraînement</button>
+      <button data-mode="challenge">Défi Chrono</button>
+    </div>
+    <div id="trainingContent">
+      <div class="empty-state">
+        <h3>Choisis un combo</h3>
+        <p>Va dans la page Champions, sélectionne un champion puis clique sur "S'entraîner".</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
